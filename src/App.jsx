@@ -21,7 +21,7 @@ function App() {
   }, [expenses]);
 
   const addExpense = (expense) => {
-    if (!expense.name || !expense.amount) return; // prevent empty expense
+    if (!expense.title || !expense.amount) return; // prevent empty expense
     setExpenses([{ id: Date.now(), ...expense }, ...expenses]);
   };
 
